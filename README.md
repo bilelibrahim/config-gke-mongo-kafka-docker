@@ -42,27 +42,27 @@ $ docker stack services storefront
 ID                  NAME                       MODE                REPLICAS            IMAGE                                        PORTS
 ID                  NAME                       MODE                REPLICAS            IMAGE                                        PORTS
 2b8h3jhbnqfy        storefront_mongo_express   replicated          1/1                 mongo-express:latest                         *:8081->8081/tcp
-5rwt5ayi20md        storefront_accounts        replicated          1/1                 bilel/storefront-accounts:latest
+5rwt5ayi20md        storefront_accounts        replicated          1/1                 bilel/accounts:latest
 6d3uxc08s4ko        storefront_mongo           replicated          1/1                 mongo:latest                                 *:27017->27017/tcp
 ezkh59y3kncd        storefront_kafka_manager   replicated          1/1                 hlebalbau/kafka-manager:latest               *:9000->9000/tcp
-gzz4o5q1v7dr        storefront_fulfillment     replicated          1/1                 bilel/storefront-fulfillment:latest
-jk2twiamz474        storefront_zuul            replicated          1/1                 bilel/storefront-zuul:latest          *:8080->8080/tcp
+gzz4o5q1v7dr        storefront_fulfillment     replicated          1/1                 bilel/fulfillment:latest
+jk2twiamz474        storefront_zuul            replicated          1/1                 bilel/zuul:latest          *:8080->8080/tcp
 nx23d9aef15o        storefront_zookeeper       replicated          1/1                 wurstmeister/zookeeper:latest                *:2181->2181/tcp
-qggjcswrfv6m        storefront_eureka          replicated          1/1                 bilel/storefront-eureka:latest        *:8761->8761/tcp
+qggjcswrfv6m        storefront_eureka          replicated          1/1                 bilel/eureka:latest        *:8761->8761/tcp
 ty4u7r09org5        storefront_kafka           replicated          1/1                 wurstmeister/kafka:latest                    *:9092->9092/tcp
-vn1as2p93jrf        storefront_orders          replicated          1/1                 bilel/storefront-orders:latest
+vn1as2p93jrf        storefront_orders          replicated          1/1                 bilel/orders:latest
 
 $ docker container ls
 
 CONTAINER ID        IMAGE                                        COMMAND                  CREATED              STATUS              PORTS                                  NAMES
 749199f2c84a        mongo-express:latest                         "tini -- node app"       38 seconds ago       Up 36 seconds       8081/tcp                               storefront_mongo_express.1.arjli02nc06p9901y47hpevfl
 814b801940ea        wurstmeister/kafka:latest                    "start-kafka.sh"         About a minute ago   Up About a minute                                          storefront_kafka.1.q8d4jw0bcbdmcjrhvjt35p4hv
-aea969916f7e        bilel/storefront-eureka:latest        "java -jar -Djava.se…"   4 hours ago          Up 4 hours          8761/tcp                               storefront_eureka.1.r0ag0rtf5dgxjkipcbgy4phdk
-894d57522cf5        bilel/storefront-zuul:latest          "java -jar -Djava.se…"   4 hours ago          Up 4 hours          8761/tcp                               storefront_zuul.1.vaw0ot7l7yktke2e4skf1dmg2
+aea969916f7e        bilel/eureka:latest        "java -jar -Djava.se…"   4 hours ago          Up 4 hours          8761/tcp                               storefront_eureka.1.r0ag0rtf5dgxjkipcbgy4phdk
+894d57522cf5        bilel/zuul:latest          "java -jar -Djava.se…"   4 hours ago          Up 4 hours          8761/tcp                               storefront_zuul.1.vaw0ot7l7yktke2e4skf1dmg2
 b650d357d787        hlebalbau/kafka-manager:latest               "/kafka-manager/bin/…"   4 hours ago          Up 4 hours                                                 storefront_kafka_manager.1.heequi6l9ylxqwos5bx47imh2
-a93b12beb396        bilel/storefront-fulfillment:latest   "java -jar -Djava.se…"   4 hours ago          Up 4 hours          8080/tcp                               storefront_fulfillment.1.u1o4rahz0decqpmokmefx9n8a
+a93b12beb396        bilel/fulfillment:latest   "java -jar -Djava.se…"   4 hours ago          Up 4 hours          8080/tcp                               storefront_fulfillment.1.u1o4rahz0decqpmokmefx9n8a
 af280e77f975        wurstmeister/zookeeper:latest                "/bin/sh -c '/usr/sb…"   4 hours ago          Up 4 hours          22/tcp, 2181/tcp, 2888/tcp, 3888/tcp   storefront_zookeeper.1.xbg8xetfof68l89ex4w155gnw
-f2c82d998ac8        bilel/storefront-accounts:latest      "java -jar -Djava.se…"   4 hours ago          Up 4 hours          8080/tcp                               storefront_accounts.1.vceb6iz8kehkssvni7hplsd0q
-aab1d81eb677        bilel/storefront-orders:latest        "java -jar -Djava.se…"   4 hours ago          Up 4 hours          8080/tcp                               storefront_orders.1.sh4klmcnbilg5t33yqd2uzll4
+f2c82d998ac8        bilel/accounts:latest      "java -jar -Djava.se…"   4 hours ago          Up 4 hours          8080/tcp                               storefront_accounts.1.vceb6iz8kehkssvni7hplsd0q
+aab1d81eb677        bilel/orders:latest        "java -jar -Djava.se…"   4 hours ago          Up 4 hours          8080/tcp                               storefront_orders.1.sh4klmcnbilg5t33yqd2uzll4
 bb2d8ffebafd        mongo:latest                                 "docker-entrypoint.s…"   4 hours ago          Up 4 hours          27017/tcp                              storefront_mongo.1.tg6oa5t75wv2vow2hpoh6q871
 ```

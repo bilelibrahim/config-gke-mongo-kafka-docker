@@ -4,7 +4,7 @@ metadata:
   name: mongdb-atlas-external-mesh
 spec:
   hosts:
-  - storefront-cluster-m0-ojqiy.gcp.mongodb.net
+  - cluster-m0-ojqiy.gcp.mongodb.net
   ports:
   - name: mongo
     number: 27017

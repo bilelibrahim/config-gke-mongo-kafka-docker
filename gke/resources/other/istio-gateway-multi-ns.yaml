@@ -1,7 +1,7 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  name: storefront-gateway
+  name: gateway
 spec:
   selector:
     istio: ingressgateway
@@ -11,19 +11,19 @@ spec:
       name: http
       protocol: HTTP
     hosts:
-    - api.dev.storefront-demo.com
-    - api.test.storefront-demo.com
-    - api.staging.storefront-demo.com
+    - api.dev.demo.com
+    - api.test.demo.com
+    - api.staging.demo.com
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: storefront-dev
+  name: dev
 spec:
   hosts:
-  - api.dev.storefront-demo.com
+  - api.dev.demo.com
   gateways:
-  - storefront-gateway
+  - gateway
   http:
   - match:
     - uri:
@@ -53,12 +53,12 @@ spec:
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: storefront-test
+  name: test
 spec:
   hosts:
-  - api.test.storefront-demo.com
+  - api.test.demo.com
   gateways:
-  - storefront-gateway
+  - gateway
   http:
   - match:
     - uri:
@@ -88,12 +88,12 @@ spec:
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: storefront-staging
+  name: staging
 spec:
   hosts:
-  - api.staging.storefront-demo.com
+  - api.staging.demo.com
   gateways:
-  - storefront-gateway
+  - gateway
   http:
   - match:
     - uri:

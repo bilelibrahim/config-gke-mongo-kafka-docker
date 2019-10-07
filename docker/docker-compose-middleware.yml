@@ -2,7 +2,7 @@ version: '3.2'
 
 services:
   zuul:
-    image: bilel/storefront-zuul:latest
+    image: bilel/zuul:latest
     # expose:
     # - "8080"
     ports:
@@ -22,7 +22,7 @@ services:
     - kafka-net
 
   eureka:
-    image: bilel/storefront-eureka:latest
+    image: bilel/eureka:latest
     # expose:
     # - "8761"
     ports:

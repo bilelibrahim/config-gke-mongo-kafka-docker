@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
       - name: fulfillment
-        image: bilel/storefront-fulfillment:gke-2.2.0
+        image: bilel/fulfillment:gke-2.2.0
         resources:
           requests:
             memory: "250M"

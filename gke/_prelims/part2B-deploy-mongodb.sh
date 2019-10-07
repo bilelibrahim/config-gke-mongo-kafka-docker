@@ -15,9 +15,9 @@ export NAMESPACE=dev
 #
 # helm install --name mongodb-release \
 #   --namespace $NAMESPACE \
-#   --set mongodbRootPassword=storefront-root-password \
-#   --set mongodbUsername=storefront-user \
-#   --set mongodbPassword=storefront-password \
+#   --set mongodbRootPassword=root-password \
+#   --set mongodbUsername=user \
+#   --set mongodbPassword=password \
 #   --set mongodbDatabase=accounts \
 #   --set mongodbEnableIPv6=false \
 #   stable/mongodb

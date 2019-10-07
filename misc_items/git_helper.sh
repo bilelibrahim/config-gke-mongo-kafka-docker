@@ -7,12 +7,12 @@ args=("$@")
 
 root="/Users/bilel/Documents/projects"
 repos=(
-  storefront-demo-accounts
-  storefront-demo-orders
-  storefront-demo-fulfillment
-  storefront-eureka-server
-  storefront-zuul-proxy
-  storefront-kafka-docker
+  accounts
+  orders
+  fulfillment
+  eureka-server
+  zuul-proxy
+  kafka-docker
 )
 if [ -n "${args[0]}" ]; then
     comment=${args[0]}

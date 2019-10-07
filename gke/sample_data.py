@@ -16,7 +16,7 @@ def main():
 
 
 def create_sample_data():
-    storefront_api_url = 'http://api.dev.storefront-demo.com'
+    storefront_api_url = 'http://api.dev.demo.com'
     sample_urls = [
         'accounts/actuator/health',
         'orders/actuator/health',

@@ -2,7 +2,7 @@ version: '3.2'
 
 services:
   accounts:
-    image: bilel/storefront-accounts:latest
+    image: bilel/accounts:latest
     # ports:
     # - "8080:8080/tcp"
     depends_on:
@@ -15,7 +15,7 @@ services:
     - kafka-net
 
   orders:
-    image: bilel/storefront-orders:latest
+    image: bilel/orders:latest
     # ports:
     # - "8080:8080/tcp"
     depends_on:
@@ -29,7 +29,7 @@ services:
     - kafka-net
 
   fulfillment:
-    image: bilel/storefront-fulfillment:latest
+    image: bilel/fulfillment:latest
     # ports:
     # - "8080:8080/tcp"
     depends_on:
