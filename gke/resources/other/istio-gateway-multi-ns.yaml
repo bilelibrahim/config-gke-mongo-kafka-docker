@@ -11,9 +11,9 @@ spec:
       name: http
       protocol: HTTP
     hosts:
-    - api.dev.demo.com
-    - api.test.demo.com
-    - api.staging.demo.com
+    - api.dev.bilel-ibrahim.ovh
+    - api.test.bilel-ibrahim.ovh
+    - api.staging.bilel-ibrahim.ovh
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
