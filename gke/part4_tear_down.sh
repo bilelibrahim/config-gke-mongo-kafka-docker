@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Constants - CHANGE ME!
-readonly PROJECT='gke-confluent-atlas'
-readonly CLUSTER='api'
-readonly REGION='us-central1'
-readonly ZONE='us-central1-a'
+readonly PROJECT='gke-confluent-atlas-254819'
+readonly CLUSTER='storefront-api'
+readonly REGION='europe-west2'
+readonly ZONE='europe-west2-a'
 
 # Delete GKE cluster (time in foreground)
 time yes | gcloud beta container clusters delete $CLUSTER --zone $ZONE
