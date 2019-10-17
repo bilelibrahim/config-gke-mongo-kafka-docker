@@ -8,7 +8,7 @@
 # Constants - CHANGE ME!
 readonly NAMESPACE='dev'
 readonly PROJECT='gke-confluent-atlas-254819'
-readonly CLUSTER='storefront-api'
+readonly CLUSTER='api'
 readonly REGION='europe-west2'
 readonly ZONE='europe-west2-a'
 
