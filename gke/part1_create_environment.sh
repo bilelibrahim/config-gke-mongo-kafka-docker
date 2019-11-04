@@ -18,7 +18,7 @@ time \
   --project $PROJECT clusters create $CLUSTER \
   --zone $ZONE \
   --username "admin" \
-  --cluster-version "1.13.7-gke.24" \
+  --cluster-version "1.13.11-gke.5" \
   --machine-type "n1-standard-2" \
   --image-type "COS" \
   --disk-type "pd-standard" \
